@@ -7,7 +7,7 @@
 > React, Next.js, Node.js, Express.js, Sequalize, Postgresql
 
 # Wireframes
-[Home page](https://res.cloudinary.com/dhe2c2/image/upload/v1662163704/HOME_byaw1m.png)
+![HOME](https://user-images.githubusercontent.com/101614021/188248114-3da6cacc-fc48-44fc-b678-a362ff7ab51d.png)
 
 # User stories
 1. As a user, I want to be able to create an account.
