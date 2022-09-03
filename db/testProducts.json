@@ -1,0 +1,12 @@
+{ 
+  "products": [
+    {"id": "100", "sku": "rsc00100", "name": "Commodore 64", "description": "some info about product", "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Commodore-64-Computer-FL.jpg", "price": 250, "category": "Computers", "quantity": 10, "stockStatus": "INSTOCK", "rating": 5 },
+    {"id": "101", "sku": "rsc00101", "name": "Commodore VIC-20", "description": "some info about product", "image": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Commodore-VIC-20-FL.jpg", "price": 185, "category": "Computers", "quantity": 13, "stockStatus": "INSTOCK", "rating": 4 },
+    {"id": "102", "sku": "rsc00102", "name": "Commodore 128", "description": "some info about product", "image": "https://www.c64-wiki.com/images/d/dc/C128.jpg", "price": 355, "category": "Computers", "quantity": 8, "stockStatus": "INSTOCK", "rating": 5 },
+    {"id": "103", "sku": "rsp00103", "name": "6502", "description": "some info about product", "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/MOS_6502AD_4585_top.jpg", "price": 35, "category": "Components", "quantity": 35, "stockStatus": "INSTOCK", "rating": 4 },
+    {"id": "104", "sku": "rsp00104", "name": "VIC-II", "description": "some info about product", "image": "https://images.squarespace-cdn.com/content/v1/511651d6e4b0a31c035e30aa/1366628152245-ROMVD6KE37B9J7QY6GJ6/vicII.JPG", "price": 45, "category": "Components", "quantity": 18, "stockStatus": "INSTOCK", "rating": 4 }
+    
+
+  ]
+}
+
