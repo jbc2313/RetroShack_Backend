@@ -8,7 +8,12 @@ const getAll = (req, res) => {
 }
 
 const getOne = (req, res) => {
- 
+  console.log('product get one route pinged.')
+  console.log(req.params)
+  //This will have to be changed when sequalize is hooked up
+
+  const singleProduct = productsData.products.filter(product => product.id === req.params.id)
+  res.json({product: singleProduct[0]})
 }
 
 module.exports = {
