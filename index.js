@@ -12,7 +12,12 @@ app.use(cors())
 require('dotenv').config();
 
 //connect to db
+const db = require('./db/connection');
 
+//test db
+db.authenticate()
+  .then((() => console.log('DB connected...')))
+  .catch(err => console.log('Error: ' + err))
 
 //initialize express server
 app.use(express.json());
