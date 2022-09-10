@@ -42,9 +42,14 @@ const login = (req, res) => {
   User.findOne({ where: { email: req.body.email.toLowerCase()}})
   .then(user => {
     if(user) {
-      res.json(user)
-    }
-    else {
+      const pwIsValid = bcrypt.compareSync(req.body.password, user.password);
+      if(pwIsValid === false) {
+        res.json({ msg: 'Wrong Password'})
+      }
+      else {
+        res.json(user)
+      }
+    } else {
       //No user in DB
       res.json(null)
     }
