@@ -12,4 +12,9 @@ router.post('/products/new', productsCtrl.newProduct)
 router.get('/products/:id', productsCtrl.getOne)
 
 
+// add delete route
+
+// add update route (put route)
+
+
 module.exports = router;

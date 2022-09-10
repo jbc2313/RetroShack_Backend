@@ -6,7 +6,9 @@ const authCtrl = require('../controllers/authController');
 
 router.get('/logout', authCtrl.logout);
 
-router.post('/login', authCtrl.login)
+router.post('/login', authCtrl.login);
+
+router.post('/signup', authCtrl.signup)
 
 
 
