@@ -1,15 +1,14 @@
 const sequelize = require('sequelize');
-const Sequelize = require('sequelize');
 const db = require('../db/connection');
 
 const Product = db.define('product', {
   id: {
-    type: Sequelize.UUID,
+    type: sequelize.UUID,
     defaultValue: sequelize.UUIDV4,
     primaryKey: true
   },
   sku: {
-    type: Sequelize.STRING
+    type: sequelize.STRING
   },
   name: {
     type: sequelize.STRING
