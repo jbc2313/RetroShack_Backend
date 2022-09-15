@@ -8,14 +8,14 @@ const getAll = (req, res) => {
   res.json(productsData)
 }
 
-const getOne = (req, res) => {
-  console.log('product get one route pinged.')
-  console.log(req.params)
-  //This will have to be changed when sequalize is hooked up
+// const getOne = (req, res) => {
+//   console.log('product get one route pinged.')
+//   console.log(req.params)
+//   //This will have to be changed when sequalize is hooked up
 
-  const singleProduct = productsData.products.filter(product => product.id === req.params.id)
-  res.json({product: singleProduct[0]})
-}
+//   const singleProduct = productsData.products.filter(product => product.id === req.params.id)
+//   res.json({product: singleProduct[0]})
+// }
 
 // THESE INCLUDE THE DB
 
@@ -49,8 +49,26 @@ const newProduct = (req, res) => {
 }
 
 
+const getOne = (req, res) => {
+  console.log('product get one route pinged.')
+  console.log(req.params)
+  Product.findOne({ where: { id: req.params.id } })
+  .then(prod => res.json(prod))
+}
 
 
+const deleteProduct = (req, res) => {
+  console.log("Product Delete Route pinged")
+  Product.destroy({ where: { id: req.params.id } })
+  .then(resp => res.json({ msg: 'Product Deleted.'}))
+  .catch(err => res.json(err, {msg: 'product NOT deleted'}))
+}
+
+const updateProduct = (req, res) => {
+  console.log("product patch route pinged")
+
+
+}
 
 /*
 
@@ -76,5 +94,7 @@ module.exports = {
   getOne,
   getProducts,
   newProduct,
+  deleteProduct,
+  updateProduct,
 
 }
