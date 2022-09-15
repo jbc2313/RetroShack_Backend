@@ -66,7 +66,25 @@ const deleteProduct = (req, res) => {
 
 const updateProduct = (req, res) => {
   console.log("product patch route pinged")
-
+  console.log(req.body)
+  Product.update({
+    sku: req.body.sku,
+    name: req.body.name,
+    description: req.body.description,
+    image: req.body.image,
+    price: req.body.price,
+    category: req.body.category,
+    quantity: req.body.quantity,
+    stockStatus: req.body.stockStatus,
+    rating: req.body.rating
+    },
+    {
+      where: {
+        id: req.body.id
+      }
+    }
+  ).then(resp => res.json({ msg: 'Product updated'}))
+  .catch(err => res.json(err))
 
 }
 

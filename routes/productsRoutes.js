@@ -16,9 +16,7 @@ router.get('/products/:id', productsCtrl.getOne)
 // add delete route
 router.delete('/products/:id', productsCtrl.deleteProduct)
 
-
-
 // add update route (put route)
-
+router.patch('/products/:id', productsCtrl.updateProduct)
 
 module.exports = router;
