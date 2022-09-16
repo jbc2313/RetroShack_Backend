@@ -6,6 +6,10 @@ const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize(process.env.DB_URL, {
   define: {
     freezeTableName: true
+  },
+  pool: {
+    idle: 4000,
+    evict: 4000,
   }
 });
 
