@@ -10,6 +10,10 @@ router.post('/login', authCtrl.login);
 
 router.post('/signup', authCtrl.signup)
 
+router.post('/make/admin', authCtrl.makeAdmin)
+
+router.post('/find/user', authCtrl.getInfo)
+
 
 
 module.exports = router

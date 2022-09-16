@@ -64,8 +64,27 @@ const logout = (req, res) => {
 }
 
 
+const makeAdmin = (req, res) => {
+  console.log('ADMIN MADE!')
+  User.update({ isAdmin: true }, {where: { email: 'jimbo@gmail.com'}})
+  .then(resp => {
+    res.json(resp)
+  })
+
+}
+
+const getInfo = (req, res) => {
+  console.log('user get info route pinged')
+  User.findOne({ where: { email: req.body.email.toLowerCase() }})
+  .then(user => {
+    res.json(user)
+  })
+}
+
 module.exports = {
   login,
   logout,
   signup,
+  makeAdmin,
+  getInfo,
 }
