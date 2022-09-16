@@ -1,5 +1,6 @@
 const productsData = require('../db/testProducts.json')
 const Product = require('../models/Product')
+const Review = require('../models/Review')
 
 // THESE ARE TESTING ROUTES WITHOUT DB
 const getAll = (req, res) => {
@@ -51,7 +52,7 @@ const newProduct = (req, res) => {
 const getOne = (req, res) => {
   console.log('product get one route pinged.')
   console.log(req.params)
-  Product.findOne({ where: { id: req.params.id } })
+  Product.findOne({ where: { id: req.params.id }, include: Review })
   .then(prod => res.json(prod))
 }
 
@@ -87,6 +88,19 @@ const updateProduct = (req, res) => {
 
 }
 
+const newReview = (req, res) => {
+  console.log('new review route pinged')
+  //console.log(req.body)
+  Review.create({
+    user: req.body.user,
+    stars: req.body.stars,
+    body: req.body.body,
+    productId: req.body.productId
+  })
+  .then(rev => res.json(rev))
+  .catch(er => res.json(er))
+}
+
 /*
 
 const Op = Sequelize.Op;
@@ -112,5 +126,6 @@ module.exports = {
   newProduct,
   deleteProduct,
   updateProduct,
+  newReview,
 
 }

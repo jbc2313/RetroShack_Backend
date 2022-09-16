@@ -1,6 +1,7 @@
 const sequelize = require('sequelize');
 const { DataTypes } = require('sequelize');
 const db = require('../db/connection');
+const Review = require('../models/Review')
 
 const Product = db.define('product', {
   id: {
@@ -39,8 +40,24 @@ const Product = db.define('product', {
 
 })
 
-Product.sync().then(() => {
+
+Product.hasMany(Review, {
+  foreignKey: {
+    name: 'productId',
+    allowNull: false
+  }
+});
+Review.belongsTo(Product)
+
+
+Product.sync({ alter: true }).then(() => {
   console.log('table created');
 });
+
+Review.sync({ alter: true }).then(() => {
+  console.log('review table synced')
+})
+
+
 
 module.exports = Product;

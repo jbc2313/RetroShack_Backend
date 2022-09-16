@@ -19,4 +19,6 @@ router.delete('/products/:id', productsCtrl.deleteProduct)
 // add update route (put route)
 router.patch('/products/:id', productsCtrl.updateProduct)
 
+router.post('/products/review/new', productsCtrl.newReview)
+
 module.exports = router;

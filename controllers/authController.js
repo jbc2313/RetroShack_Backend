@@ -75,6 +75,7 @@ const makeAdmin = (req, res) => {
 
 const getInfo = (req, res) => {
   console.log('user get info route pinged')
+  console.log(req.body)
   User.findOne({ where: { email: req.body.email.toLowerCase() }})
   .then(user => {
     res.json(user)
