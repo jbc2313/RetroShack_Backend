@@ -50,11 +50,11 @@ Product.hasMany(Review, {
 Review.belongsTo(Product)
 
 
-Product.sync({ alter: true }).then(() => {
+Product.sync().then(() => {
   console.log('table created');
 });
 
-Review.sync({ alter: true }).then(() => {
+Review.sync().then(() => {
   console.log('review table synced')
 })
 
