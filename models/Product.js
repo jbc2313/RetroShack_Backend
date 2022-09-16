@@ -1,38 +1,39 @@
 const sequelize = require('sequelize');
+const { DataTypes } = require('sequelize');
 const db = require('../db/connection');
 
 const Product = db.define('product', {
   id: {
-    type: sequelize.UUID,
-    defaultValue: sequelize.UUIDV4,
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
     primaryKey: true
   },
   sku: {
-    type: sequelize.STRING
+    type: DataTypes.STRING
   },
   name: {
-    type: sequelize.STRING
+    type: DataTypes.TEXT
   },
   description: {
-    type: sequelize.STRING
+    type: DataTypes.TEXT
   },
   image: {
-    type: sequelize.STRING
+    type: DataTypes.TEXT
   },
   price: {
-    type: sequelize.FLOAT
+    type: DataTypes.FLOAT
   },
   category: {
-    type: sequelize.STRING
+    type: DataTypes.STRING
   },
   quantity: {
-    type: sequelize.INTEGER
+    type: DataTypes.INTEGER
   },
   stockStatus: {
-    type: sequelize.STRING
+    type: DataTypes.STRING
   },
   rating: {
-    type: sequelize.INTEGER
+    type: DataTypes.INTEGER
 
   }
 

@@ -1,5 +1,4 @@
 const productsData = require('../db/testProducts.json')
-const db = require('../db/connection')
 const Product = require('../models/Product')
 
 // THESE ARE TESTING ROUTES WITHOUT DB
@@ -89,7 +88,6 @@ const updateProduct = (req, res) => {
 }
 
 /*
-
 
 const Op = Sequelize.Op;
 
