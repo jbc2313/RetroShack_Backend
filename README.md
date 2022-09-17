@@ -1,10 +1,14 @@
 # RetroShack
 
-# About
-> This will be an online store for retro computers from the late 1970s to early 1990's, mainly 8 bit computers. Apple II's, Commodore Vic-20's and C-64's, Atari 400's and 800's. You will be able to see all available stock without logging in, You can create an account and add items to your cart. As well as leave reviews for items. Admins will have a separte login that allows them to add and remove items and update stock. This will be my first attempt at an e-commerce platform. I want to use Postgresql and Sequalize instead of Mongoose and MongoDB. I think this will really round out my portfolio. It will have Auth from JWT's and full crud. I want to really work on styling this website nicely and potentially add some css transistions to really add to the overall feeling of the site.
+# Links
+> Frontend - [RetroShack](https://retroshack-frontend.vercel.app/)
+> API - [RetroBackend](https://dark-lime-sea-urchin-shoe.cyclic.app)
 
 # Tech used
 > React, Next.js, Next-Auth, PrimeReact, Node.js, Express.js, Sequalize, Postgresql
+
+# About
+> This will be an online store for retro computers from the late 1970s to early 1990's, mainly 8 bit computers. Apple II's, Commodore Vic-20's and C-64's, Atari 400's and 800's. You will be able to see all available stock without logging in, You can create an account and add items to your cart. As well as leave reviews for items. Admins will have a separte login that allows them to add and remove items and update stock. This will be my first attempt at an e-commerce platform. I want to use Postgresql and Sequalize instead of Mongoose and MongoDB. I think this will really round out my portfolio. It will have Auth from JWT's and full crud. I want to really work on styling this website nicely and potentially add some css transistions to really add to the overall feeling of the site.
 
 # Wireframes
 ![HOME](https://user-images.githubusercontent.com/101614021/188248114-3da6cacc-fc48-44fc-b678-a362ff7ab51d.png)
