@@ -1,7 +1,7 @@
 # RetroShack
 
 # Links
-> Frontend - [RetroShack](https://retroshack-frontend.vercel.app/)
+> Frontend - [RetroShack](https://retroshack-frontend.vercel.app/)<br>
 > API - [RetroBackend](https://dark-lime-sea-urchin-shoe.cyclic.app)
 
 # Tech used
