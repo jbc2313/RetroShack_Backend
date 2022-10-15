@@ -1,6 +1,7 @@
 const db = require('../db/connection');
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
+const mailer = require('../util/mailer');
 const saltRounds = 10;
 
 
@@ -22,7 +23,12 @@ const signup = (req, res) => {
         email: req.body.email.toLowerCase(),
         password: hash 
       })
-      .then(user => res.json(user))
+      .then(user => { 
+          mailer.sendAccountCreatedEmail(user.email)
+          .then(link => {
+              res.json({user, link})
+          })
+      })
       .catch(err => {
         console.log(err)
         res.json({msg: 'Signup Failed'})
